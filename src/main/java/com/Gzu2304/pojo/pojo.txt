@@ -1,0 +1,73 @@
+数据承载
+
+POJO 用于承载数据，通常表示数据库中的一条记录。
+
+例如，一个 User 类可以表示数据库中的 user 表。
+
+与数据库表映射
+
+在 ORM（对象关系映射）框架中（如 JPA、MyBatis），POJO 类的字段与数据库表的列一一对应。
+
+通过注解或配置文件，可以将 POJO 与数据库表关联起来。
+
+数据传输
+
+POJO 可以在不同层之间传输数据，例如从 DAO 层传递到 Service 层，或从 Controller 层返回给前端。
+
+简洁性
+
+POJO 是一个纯粹的 Java 对象，不依赖于任何框架，因此具有高度的可移植性和可维护性。
+
+POJO 的特点
+简单的属性
+
+POJO 通常只包含私有字段、公共的 getter 和 setter 方法，以及无参构造方法。
+
+示例：
+
+java
+复制
+public class User {
+    private Long id;
+    private String username;
+    private String email;
+
+    // 无参构造方法
+    public User() {}
+
+    // Getter 和 Setter 方法
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+}
+
+
+请注意，我们的项目中使用了lombok插件，所以无需加get，set方法，只需要使用注解@Data即可
+@Data（使用注解）
+public class User {
+    private Long id;
+    private String username;
+    private String email;
+
+
+}

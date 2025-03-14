@@ -1,0 +1,33 @@
+1. 处理HTTP请求
+Controller 通过注解（如 @GetMapping, @PostMapping, @PutMapping, @DeleteMapping 等）定义不同的HTTP请求处理方法。
+
+每个方法对应一个或多个URL路径，处理特定的请求。
+
+2. 接收请求参数
+Controller 可以接收来自客户端的不同类型参数，如路径参数（@PathVariable）、查询参数（@RequestParam）、请求体（@RequestBody）、请求头（@RequestHeader）等。
+
+这些参数会被自动绑定到方法的参数中。
+
+3. 调用业务逻辑
+Controller 通常不直接处理业务逻辑，而是调用 Service 层或其他组件来完成具体的业务操作。
+
+通过依赖注入（如 @Autowired）将 Service 注入到 Controller 中。
+
+4. 返回响应
+Controller 方法可以返回多种类型的响应，如JSON数据、HTML页面、文件下载等。
+
+常见的返回类型包括：
+
+@ResponseBody：返回JSON或XML格式的数据。
+
+ModelAndView：返回视图和模型数据。
+
+ResponseEntity：自定义HTTP状态码和响应体。
+
+5. 异常处理
+Controller 可以通过 @ExceptionHandler 注解处理特定异常，返回自定义的错误响应。
+
+也可以使用 @ControllerAdvice 全局处理异常。
+
+6. URL路由
+Controller 通过 @RequestMapping 或其衍生注解（如 @GetMapping）定义URL路由规则，将请求映射到对应的方法。
