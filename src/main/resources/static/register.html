@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册界面</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+    <div class="container">
+        <h2>注册</h2>
+        <form @submit.prevent="register">
+            <div class="form-group">
+                <label for="nickname">请输入昵称</label>
+                <input type="text" id="nickname" v-model="nickname" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">请输入手机号码</label>
+                <input type="text" id="phone" v-model="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="code">请输入密码</label>
+                <input type="text" id="code" v-model="code" required>
+                <button type="button" @click="getCode">获取验证码</button>
+            </div>
+            <div class="form-group">
+                <label for="inviteCode">请输入6位手机验证码</label>
+                <input type="text" id="inviteCode" v-model="inviteCode" required>
+            </div>
+            <button type="submit">注 册</button>
+        </form>
+        <p>登录即代表您已同意《服务协议和隐私政策》</p>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="app.js"></script>
+</body>
+</html>

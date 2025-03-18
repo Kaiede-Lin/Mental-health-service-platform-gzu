@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主界面</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="container">
+    <h2>欢迎来到主界面</h2>
+    <p>这里是你的主网站内容。</p>
+    <button @click="logout">退出登录</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script>
+    new Vue({
+        el: '.container',
+        methods: {
+            logout() {
+                // 清除登录状态（例如清除 token 或 session）
+                alert('退出登录成功');
+                window.location.href = './index.html'; // 跳转到登录页面
+            }
+        }
+    });
+</script>
+</body>
+</html>
