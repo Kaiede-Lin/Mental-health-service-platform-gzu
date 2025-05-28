@@ -30,7 +30,7 @@ new Vue({
                 .then(data => {
                     if (data.success) {
                         alert('注册成功');
-                        window.location.href = './index.html'
+                        window.location.href = './login.html'
                     } else {
                         alert('注册失败: ' + data.message);
                     }

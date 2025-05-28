@@ -1,29 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登录</title>
-    <link rel="stylesheet" href="login.css">
+    <title>心灵观察力 - 心理健康服务平台</title>
+    <link rel="stylesheet" href="./homepage.css">
 </head>
 <body>
-<div id="login" class="login">
-    <h2>登录</h2>
-    <form id="loginForm">
-        <div class="form-group">
-            <label for="phone">手机号</label>
-            <input type="text" id="phone" v-model="phone" placeholder="请输入手机号">
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <img class="logo" src="logo@1x.png">
+                <ul class="nav-links">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">心理测评</a></li>
+                    <li><a href="#">心理咨询</a></li>
+                    <li><a href="#">帮助社区</a></li>
+                    <li><a href="#">舒缓音乐</a></li>
+                    <li><a href="#">个人中心</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">登录</a>
+                    <a href="register.html" class="btn btn-primary">注册</a>
+                </div>
+            </nav>
         </div>
-        <div class="form-group">
-            <label for="code">密码</label>
-            <input type="text" id="code" v-model="code" placeholder="请输入密码">
-        </div>
-        <button type="button" @click="login">登录</button>
-    </form>
-    <p>还没有账号？<a href="/register.html">立即注册</a></p>
-</div>
+    </header>
 
-<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-<script src="login.js"></script>
+    <!-- 主横幅 -->
+    <section class="hero">
+        <div id="background1"></div>
+        <div class="container">
+            <h1>每次选择，都通向更好的自己</h1>
+            <p>每一次测评，都是对内心的探索。让我们一起开启心理健康之<p></p>旅，发现更美好的自己。</p>
+            <a href="#" class="btn btn-primary">开始测评</a>
+        </div>
+    </section>
+
+    <!-- 服务部分 -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">心理测评服务</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <img class="logo2" src="路径@1x.png">
+                    <h3>测试倒计时</h3>
+                    <p>距离下一次测试还有： 5天</p>
+                    <a href="#" class="btn btn-outline">提前测试</a>
+                </div>
+                <div class="service-card">
+                    <img class="logo2" src="路径@2x.png">
+                    <h3>成长追踪</h3>
+                    <p>记录您的心理健康成长轨迹，查看历史评估结果，见证积极的改变。</p>
+                    <a href="#" class="btn btn-outline">查看报告</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 资讯部分 -->
+    <section class="news">
+        <div class="container">
+            <h2 class="section-title">最新心理资讯</h2>
+        <div class="stitles">
+            <ul class="nav-links">
+                <div class="stitle">
+                <img class="slogo" src="SVG@1x.png">
+                <li><a href="#">情感困扰</a></li>       <!-- 后续添加跳转网站 -->
+                 </div>
+
+                 <div class="stitle">
+                    <img class="slogo" src="SVG@1x%20(1).png">
+                    <li><a href="#">学习压力</a></li>       
+                </div>
+
+                 <div class="stitle">
+                    <img class="slogo" src="SVG@1x%20(2).png">
+                    <li><a href="#">人际关系</a></li>       
+                </div> 
+
+                <div class="stitle">
+                    <img class="slogo" src="路径@1x.png">
+                    <li><a href="#">心理健康</a></li>       
+                </div>
+            </ul>
+        </div>
+            <div class="news-cards" id="news-container">
+                <!-- 新闻卡片将通过JavaScript动态加载 -->
+            </div>
+        </div>
+    </section>
+
+
+    <section class="volunteer-section">
+        <div class="container">
+            <div class="volunteer-header">
+                <h2>专业志愿者伴你同行</h2>
+                <p class="subtitle">如有需要，我们专业的志愿者协助大家走向更好</p>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">专业志愿者</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5000+</div>
+                    <div class="stat-label">帮助案例</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">在线服务</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">满意度</div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <a href="#" class="btn btn-outline">总览</a>
+                <a href="#" class="btn btn-outline">成为志愿者</a>
+                <a href="#" class="btn btn-outline">寻求帮助</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>关于我们</h3>
+                    <p>心灵观察力于为用户提供专业的心理健康服</p>
+                    <p>务，帮助每个人实现更好的自己。</p>
+                </div>
+                <div class="footer-column">
+                    <h3>服务项目</h3>
+                    <a href="#">心理测评</a>          <!-- 后续添加跳转网站 -->
+                    <a href="#">AI 心理咨询</a>
+                    <a href="#">成长追踪</a>
+                    <a href="#">心理辅导</a>
+                </div>
+                <div class="footer-column">
+                    <h3>联系我们</h3>
+                    <p>邮箱：gzu666@email.com</p>
+                    <p>电话：400 888-9999</p>
+                    <p>地址：贵州大学博学楼701</p>
+                </div>
+                <div class="footer-column">
+                    <h3>关注我们</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <img src="路径1x(1).png" alt="微信图标">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="路径1x%20.png" alt="微博图标">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="路径1x%20(2).png" alt="QQ图标">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; <span id="current-year"></span> 心灵观察力 版权所有
+            </div>
+        </div>
+    </footer>
+
+    <script src="homepage.js"></script>
 </body>
 </html>

@@ -23,7 +23,7 @@ new Vue({
                 .then(data => {
                     if (data.success) {
                         alert('登录成功');
-                        window.location.href = './web.html'; // 跳转到主界面
+                        window.location.href = './index.html'; // 跳转到主界面
                     } else {
                         alert('登录失败: ' + data.message);
                     }
