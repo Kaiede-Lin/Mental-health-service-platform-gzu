@@ -84,26 +84,17 @@ function loadNewsArticles() {
 // 为按钮添加点击效果
 function addButtonEffects() {
     const buttons = document.querySelectorAll('.btn');
-    
+
     buttons.forEach(button => {
         button.addEventListener('click', function(e) {
-            e.preventDefault();
-            
+            // 删除 e.preventDefault();
+
             // 添加点击效果
             this.style.transform = 'scale(0.95)';
-            
-            // 恢复原状
+
             setTimeout(() => {
                 this.style.transform = '';
             }, 200);
-            
-            // 根据按钮类型执行不同操作
-            if (this.classList.contains('btn-primary')) {
-                console.log('主按钮被点击:', this.textContent);
-                // 这里可以添加实际的操作，如跳转页面等
-            } else if (this.classList.contains('btn-outline')) {
-                console.log('轮廓按钮被点击:', this.textContent);
-            }
         });
     });
 }
